@@ -1,0 +1,15 @@
+<div class="box box-solid userCard">
+    <div class="box-header">
+        <a class="box-header-link" href="{% url 'view_user' user.name %}">
+            <h4>
+                    {{user.name}} 
+                    {{user.firstname}} 
+            </h4>
+        </a>
+
+    </div>
+    <div class="box-body">
+
+        {{user.mail}} 
+    </div>
+</div>

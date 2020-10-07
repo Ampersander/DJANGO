@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>
+    Liste des taches
+</h1>
+
+<div class="row">
+
+    {% for tache in taches %}
+    <div class="col-xs-6 col-sm-4 col-md-3">
+
+        {% include "lesTaches/blocs/taskCard.html" with tache=tache %}
+
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
+
+{% block active %}nav-list{% endblock %}

@@ -1,0 +1,13 @@
+<div class="box box-solid box-{% if tache.closed %}danger{% else %}primary{% endif %} tacheCard">
+    <div class="box-header">
+        <a class="box-header-link" href="{% url 'view_task' tache.name %}">
+            <h4>
+                {{tache.name}} <small>( {% if tache.closed %}tache close{% else %}tache du {{tache.created_date}}{% endif %} )</small>
+            </h4>
+        </a>
+
+    </div>
+    <div class="box-body">
+        {{tache.description}}
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>
+    User : {{user.name}}
+    <span class="pull-right">
+        <a href="{% url 'delete_user' user.name %}">
+            <i class="fa fa-2x fa-trash iconTrash" aria-hidden="true"></i>
+        </a>
+        <a href="{% url 'edit_user' user.name %}">
+            <i class="fa fa-2x fa-pencil iconPen" aria-hidden="true"></i>
+        </a>
+    </span>
+</h1>
+<h3>email :</h3>
+<p>
+    {{ user.email }}
+</p>
+<h3>taches :</h3>
+<p>
+    
+    {% for task in tasks %}
+        {{task.name}}
+    {% endfor %}
+</p>
+
+{% endblock %}
